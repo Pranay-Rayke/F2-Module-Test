@@ -1,172 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  color: white;
+  font-family: "Montserrat", sans-serif;
 }
-body {
-  background: #360369;
+
+.container {
+  max-width: 1800px;
+  margin: auto;
 }
-.first {
+
+.landingPage {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 15rem;
-  flex-direction: column;
   width: 100vw;
+  height: 100vh;
+  background-color: rgb(54, 3, 105);
+  color: white;
 }
 
-.first > h1 {
+.landingText {
+  text-align: center;
+}
+
+h1 {
   font-size: 5rem;
-  font-family: "Montserrat", sans-serif;
+  margin: 20px;
 }
-.fbtn {
-  width: 22rem;
-  height: 2.5rem;
-  margin-top: 2rem;
-  background-color: white;
-  color: black;
+
+#fetchBtn {
+  outline: none;
   border: none;
+  background-color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 20px;
+  transition: 0.2s ease-in-out;
+  border-radius: 15px;
 }
 
-.fbtn:hover {
-  border: 2px solid black;
-  background-color: azure;
+#fetchBtn:hover {
+  background-color: wheat;
 }
 
-.locationData {
+#fetchBtn:focus {
+  scale: 0.9;
+}
+
+.flex {
+  padding: 50px 130px;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: fit-content;
-}
-.top {
-  margin-left: 2.5rem;
-  margin-top: 3rem;
-  background-color: #360369;
+  gap: 20px;
 }
 
-.top > h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 66px;
-  letter-spacing: 0em;
-  text-align: left;
+.showLocationSection {
+  color: white;
+  background-color: rgb(54, 3, 105);
 }
 
-.top > p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 36px;
-  font-weight: 300;
-  line-height: 44px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-top: 0.8rem;
-}
-.latlong {
-  display: flex;
-  column-gap: 4rem;
+.locationDetailSection {
+  color: rgb(54, 3, 105);
+  background-color: white;
 }
 
-.latlong > p {
+h2 {
+  font-size: 2rem;
+}
+
+.locationDetails {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 2rem;
-  margin-top: 2rem;
-  width: 380px;
-  height: 87px;
-  background: #270846;
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: 0.25rem;
+  gap: 20px;
 }
 
-.latlong > p > span {
-  background: #270846;
-  padding-left: 0.5rem;
-}
-
-.down {
-  background: white;
-  margin-top: 3rem;
-  padding-left: 2.5rem;
-  height: fit-content;
-  padding-bottom: 3rem;
-}
-.down > div > h2 {
-  color: #270846;
-}
-
-.data {
-  margin-top: 0.6rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 1.8rem;
-  padding: 1rem;
-  column-gap: 3rem;
-}
-
-.data > p {
+.weatherProps {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: rgb(32, 2, 61);
   color: white;
-  width: fit-content;
-  padding-right: 0.8rem;
-  height: 4rem;
-  border: 1px solid black;
-  padding-left: 13px;
+}
+
+#locationFrame {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+}
+
+.weatherDetails {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  border-radius: 10px;
-  background-color: #360369;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.data > p > span {
-  color: white;
-  background-color: #360369;
-  margin-left: 0.3rem;
+.bg-purple {
+  background-color: rgb(54, 3, 105) !important;
 }
 
-.down > div > h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 66px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-left: 1rem;
-  margin-top: 1rem;
-}
-
-.map {
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (max-width: 860px) {
-  .latlong {
-    flex-direction: column;
-  }
-  .data {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 620px) {
-  .data {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media screen and (max-width: 530px) {
-  .first > h1 {
-    font-size: 3rem;
-  }
-  .fbtn {
-    width: 11rem;
-    height: 2.5rem;
-  }
+.inactive {
+  display: none;
 }
